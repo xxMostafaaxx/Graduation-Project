@@ -156,12 +156,12 @@ class _ScanState extends State<Scan> {
                     style: GoogleFonts.robotoCondensed(fontSize: 25,
                         fontWeight: FontWeight.w500,
                         color: Colors.black),) :
-                  Text(
+                  SelectableText(
                     scannedText,
                     style: const TextStyle(
                       height: 5,
                       letterSpacing: 2,
-                      fontSize: 20,
+                      fontSize: 15,
                       fontWeight: FontWeight.w500,
 
                     ),

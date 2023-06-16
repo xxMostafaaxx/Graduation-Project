@@ -26,7 +26,8 @@ Future<void> loginModel(String email, String password) async {
       FlutterSecureStorage.setMockInitialValues({});
 
   var token= response.data['token'];
-
+  await storage.write(key: 'token', value: token);
+  
     // List<String>? tokenParts = token?.split('.');
     // String header = tokenParts![0];
     // String payload = tokenParts[1];
@@ -38,9 +39,6 @@ Future<void> loginModel(String email, String password) async {
     // print("Decoded Payload: $decodedPayload");
     // print("Signature: $signature");
     // print("Payload Map: $payloadMap");
-
-  await storage.write(key: 'token', value: token);
-
 
   }
 
