@@ -134,11 +134,18 @@ class _ScanState extends State<Scan> {
   Widget scanText() {
     return Scaffold(
         appBar: AppBar(
+
           elevation: 0,
           backgroundColor: Colors.white,
           centerTitle: true,
-          title: const Text("Scanned Text", style: TextStyle(color: Colors.black),),
-          leading: const BackButton(color: Colors.black,),
+          title:  Text(
+            "Scanned Text",
+            style: GoogleFonts.righteous(
+              color: Colors.green,
+              fontSize: 30,
+              fontWeight: FontWeight.w900
+          ),),
+          leading: const BackButton(color: Colors.green,),
         ),
         body:
         SingleChildScrollView(
@@ -194,7 +201,7 @@ class _ScanState extends State<Scan> {
 
 
 
-  Future<File?> cropImage({required File imageFile}) async {
+   cropImage({required File imageFile}) async {
     try {
       CroppedFile?croppedImage = await ImageCropper().cropImage(
           sourcePath: imageFile.path);
