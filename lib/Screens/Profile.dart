@@ -107,7 +107,7 @@ class _ProfileState extends State<Profile> {
                       IconButton(
                         onPressed: () async {
                           await userInfo.logOut();
-                          Navigator.push(
+                          Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(builder: (context) => login()),
                           );
